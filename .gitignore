@@ -1,0 +1,6 @@
+# Ignore temporary files
+*~
+
+# Ignore the output directory
+output/
+output/source/
