@@ -30,8 +30,8 @@ class Walker {
   }
 
   void step() {
-		int stepx = int(random(-5,5));
-		int stepy = int(random(-5,5));    
+		int stepx = int(random(-20,20));
+		int stepy = int(random(-20,20));    
 
     x += stepx;
     y += stepy;
