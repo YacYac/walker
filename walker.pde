@@ -9,49 +9,36 @@ void setup() {
 void draw() {
   w.step();
   w.display();
+  w.next_step();
 }
 
 class Walker {
-  int x;
-  int y;
+  int prev_x, prev_y;
+  int x, y; 
   
   Walker() {
-    x = width/2;
-    y = height/2;
+    prev_x = width/2;
+    prev_y = height/2;
+		x = prev_x;
+		y = prev_y;
   }
 
   void display() {
     stroke(0);
-    point(x,y);
+    line(prev_x,prev_y,x,y);
+    next_step();
   }
 
   void step() {
-    int choice = int(random(1000));
-    int stepx = 0; int stepy = 0;
-
-    if (choice < 125) {
-      stepy++;
-    } else if (choice >= 125 && choice < 250) {
-      stepx--;
-      stepy++;
-    } else if (choice >= 250 && choice < 375) {
-      stepx--;
-    } else if (choice >= 375 && choice < 500) {
-      stepx--;
-      stepy--;
-    } else if (choice >= 500 && choice < 625) {
-      stepy--;
-    } else if (choice >= 625 && choice < 750) {
-      stepy--;
-      stepx++;
-    } else if (choice >= 750 && choice < 875) {
-      stepx++;
-    } else {
-      stepx++;
-      stepy++;
-    }
+		int stepx = int(random(-5,5));
+		int stepy = int(random(-5,5));    
 
     x += stepx;
     y += stepy;
+  }
+  
+  void next_step() {
+    prev_x = x;
+    prev_y = y;
   }
 }
