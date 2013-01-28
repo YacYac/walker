@@ -24,7 +24,7 @@ class Walker {
   }
 
   void display() {
-    stroke(0);
+    stroke(random(150));
     line(prev_x,prev_y,x,y);
     next_step();
   }
