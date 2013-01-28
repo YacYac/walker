@@ -29,22 +29,22 @@ class Walker {
     int choice = int(random(1000));
     int stepx = 0; int stepy = 0;
 
-    if (choice < 115) {
+    if (choice < 125) {
       stepy++;
-    } else if (choice >= 115 && choice < 230) {
+    } else if (choice >= 125 && choice < 250) {
       stepx--;
       stepy++;
-    } else if (choice >= 230 && choice < 345) {
+    } else if (choice >= 250 && choice < 375) {
       stepx--;
-    } else if (choice >= 345 && choice < 460) {
+    } else if (choice >= 375 && choice < 500) {
       stepx--;
       stepy--;
-    } else if (choice >= 460 && choice < 575) {
+    } else if (choice >= 500 && choice < 625) {
       stepy--;
-    } else if (choice >= 575 && choice < 690) {
+    } else if (choice >= 625 && choice < 750) {
       stepy--;
       stepx++;
-    } else if (choice >= 690 && choice < 805) {
+    } else if (choice >= 750 && choice < 875) {
       stepx++;
     } else {
       stepx++;
