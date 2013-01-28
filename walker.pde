@@ -26,8 +26,30 @@ class Walker {
   }
 
   void step() {
-    int stepx = int(random(3)) - 1;
-    int stepy = int(random(3)) - 1;
+    int choice = int(random(1000));
+    int stepx = 0; int stepy = 0;
+
+    if (choice < 115) {
+      stepy++;
+    } else if (choice >= 115 && choice < 230) {
+      stepx--;
+      stepy++;
+    } else if (choice >= 230 && choice < 345) {
+      stepx--;
+    } else if (choice >= 345 && choice < 460) {
+      stepx--;
+      stepy--;
+    } else if (choice >= 460 && choice < 575) {
+      stepy--;
+    } else if (choice >= 575 && choice < 690) {
+      stepy--;
+      stepx++;
+    } else if (choice >= 690 && choice < 805) {
+      stepx++;
+    } else {
+      stepx++;
+      stepy++;
+    }
 
     x += stepx;
     y += stepy;
