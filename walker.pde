@@ -39,11 +39,19 @@ class Walker {
     direction_x = constrain(direction_x,-1,1);
     direction_y = constrain(direction_y,-1,1);
     
-		int step_x = int(random(20));
-		int step_y = int(random(20));    
-
-    step_x *= direction_x;
-    step_y *= direction_y;
+    int step_x = int(random(20));
+    int step_y = int(random(20));  
+    
+    float choice = random(100);
+    
+    if (choice < 50) {
+      step_x *= direction_x;
+      step_y *= direction_y;
+    } else if (choice < 65) {
+      step_x *= direction_x;
+    } else if (choice < 80) {
+      step_y *= direction_y;
+    } 
 
     x += step_x;
     y += step_y;
