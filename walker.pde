@@ -36,6 +36,9 @@ class Walker {
 
     x += stepx;
     y += stepy;
+    
+    x = constrain(x,0,width-1);
+    y = constrain(y,0,height-1);
   }
   
   void next_step() {
