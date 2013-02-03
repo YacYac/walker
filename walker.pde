@@ -31,11 +31,11 @@ class Walker {
   }
 
   void step() {
-		int stepx = int(random(20));
-		int stepy = int(random(20));    
+		int step_x = int(random(20));
+		int step_y = int(random(20));    
 
-    x += stepx;
-    y += stepy;
+    x += step_x;
+    y += step_y;
     
     x = constrain(x,0,width-1);
     y = constrain(y,0,height-1);
